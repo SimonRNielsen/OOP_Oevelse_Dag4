@@ -20,29 +20,41 @@ namespace ToDo
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ToDoList myToDoList;
+
         public MainWindow()
         {
             InitializeComponent();
+            myToDoList = new ToDoList();
+            DataContext = myToDoList;
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            List<string> toDoList = new List<string>();
-            toDoList.Add("Hej");
-            foreach (string entry in toDoList)
+            
+        }
+
+        private void Button_Click_AddRemove(object sender, RoutedEventArgs e)
+        {
+            if (MyTextBox.Text == string.Empty)
             {
-                Console.WriteLine(entry);
+                myToDoList.AccessToDo(myToDoList.SelectedItem);
+            }
+            else
+            {
+                myToDoList.AccessToDo(MyTextBox.Text);
+                MyTextBox.Clear();
             }
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void Button_Click_Complete(object sender, RoutedEventArgs e)
         {
-            List<string> toDoList = new List<string>();
-            toDoList.Add("Hej");
-            foreach (string entry in toDoList)
+            
+            if (myToDoList.SelectedItem != null)
             {
-                Console.WriteLine(entry);
+                myToDoList.CompletedTask(myToDoList.SelectedItem);
             }
+            
         }
     }
 }
