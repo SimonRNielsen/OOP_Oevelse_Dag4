@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F8810508-84EF-47B7-8617-B6D7022899A9}</ProjectGuid>
+    <ProjectGuid>{66A0E723-BBAF-4A1F-BDE9-C7B72C675639}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>OOP_Oevelse_4</RootNamespace>
-    <AssemblyName>OOP_Oevelse_4</AssemblyName>
+    <RootNamespace>Øvelse2</RootNamespace>
+    <AssemblyName>Øvelse2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,12 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animal.cs" />
-    <Compile Include="Bat.cs" />
-    <Compile Include="Cat.cs" />
-    <Compile Include="Dog.cs" />
-    <Compile Include="Duck.cs" />
-    <Compile Include="IFlyable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

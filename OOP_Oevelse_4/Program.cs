@@ -10,6 +10,27 @@ namespace OOP_Oevelse_4
     {
         static void Main(string[] args)
         {
+            List<Animal> collection = new List<Animal>
+            {
+                new Bat(),
+                new Cat(),
+                new Bat(),
+                new Duck(),
+                new Dog(),
+                new Cat(),
+                new Bat(),
+                new Duck(),
+                new Cat(),
+                new Dog()
+            };
+            foreach (Animal animal in collection)
+            {
+                if (animal is IFlyable)
+                {
+                    (animal as IFlyable).Fly();
+                }
+            }
+            Console.ReadKey();
         }
     }
 }
